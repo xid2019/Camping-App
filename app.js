@@ -89,10 +89,6 @@ app.use((req, res, next) => {
     next();
 })
 
-app.get('/fakeUser', async(req, res) => {
-    const user = new User({ email: 'aaaaa@gmail.com', username: 'aaaaa'})
-    const newUser = await user.register(user,'hereinputthepassword');
-})
 
 app.use("/",userRoutes);
 app.use("/campgrounds", campgroundRoutes);
